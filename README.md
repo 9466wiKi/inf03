@@ -21,5 +21,6 @@ repozytorium dotyczące kwalifikacji inf 03
 
 #Sciagniecie ostatnich zmien z repo github.com
 `git pull`
+
  #wylistowanie gałęzi 
  `git branch`
