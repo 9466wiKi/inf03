@@ -30,7 +30,18 @@
 			// połaczenie z baza 
 			$id_polaczenia = mysqli_connect("localhost", "root", "", "egzamin");
 			// zapytaniee
-			$wynik_zapytania = mysqli_query($id_polaczenia, 'SELECT czas,kierunek,nr_rejsu,status_lotu FROM przyloty ORDER BY czas ASC');
+			$sql = ('SELECT czas,kierunek,nr_rejsu,status_lotu FROM przyloty ORDER BY czas ASC');
+			$result = mysqli_query($id_polaczenia,$sql);
+
+			 
+			while($row = mysqli_fetch_assoc($result)) {
+			echo "<tr>";
+				echo "<td>" . $row["czas"] . "</td>";
+				echo "<td>" . $row["kierunek"] . "</td>";
+				echo "<td>" . $row["nr_rejsu"] . "</td>";
+				echo "<td>" . $row["status_lotu"] . "</td>";
+			echo "</tr>";
+		}
 
 
 			//rozłaczenie z baza
