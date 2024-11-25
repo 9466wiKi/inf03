@@ -92,9 +92,17 @@
     buttons.forEach(button => {
         button.addEventListener("click", (element) => {
             const news = document.querySelectorAll(".news")
+<<<<<<< HEAD
             news.forEach(div => {
                 div.style.display = "block"
             })
+=======
+            const nextElementDiv =  button.nextElementSibling;
+            news.forEach(div => {
+                div.style.display = "none"
+            })
+            nextElementDiv.style.display = "block"
+>>>>>>> develop
         })
     })
 
